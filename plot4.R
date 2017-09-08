@@ -1,6 +1,7 @@
 data <- read.table("data_cleaned.csv", sep = ",", header = TRUE)
 
 # Plot 4 (2x2 with plots 1 to 3 and line graph of global reactive power)
+png(file = "plot4.png")
 par(mfrow = c(2,2))
 with(data, {
     hist(global_active_power, col = "red", 
@@ -18,5 +19,5 @@ with(data, {
     plot(global_reactive_power~ymd_hms(date_time), type = "l",
          xlab = "datetime", ylab = "Global_reactive_power")
 })
-dev.copy(png, file = "plot4.png")
 dev.off()
+

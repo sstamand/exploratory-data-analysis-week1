@@ -21,7 +21,7 @@ data <- filter(data, date>=date1 & date<=date2)
 data <- mutate(data, date_time = paste(date, time))
 
 # Save dataframe to open in other files
-save(data, data, file = "data_cleaned.csv")
+write.csv(data, "data_cleaned.csv")
 
 # Plot 1 (histogram of Global Active Power)
 names(data)
