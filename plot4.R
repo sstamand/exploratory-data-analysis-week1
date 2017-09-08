@@ -6,8 +6,8 @@ with(data, {
     hist(global_active_power, col = "red", 
             main = "Global Active Power", 
             xlab = "Global Active Power (kilowatts)")
-    plot(global_active_power~ymd_hms(date_time), type = "l",
-            main = NULL, xlab = "", ylab = "Global Active Power (kilowatts)")
+    plot(voltage~ymd_hms(date_time), type = "l",
+         xlab = "datetime", ylab = "Voltage")
     plot(sub_metering_1~ymd_hms(date_time), type = "l", col = "black",
          main = NULL, xlab = "", ylab = "Energy sub metering")
     lines(sub_metering_2~ymd_hms(date_time), col = "red")
